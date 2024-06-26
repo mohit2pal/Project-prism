@@ -1,0 +1,13 @@
+____________________________________________________
+                       Report                       
+____________________________________________________
+The url is: https://www.google.com/
+
+scanning...
+            .....
+                   searching....
+                                 Connecting!!!!!
+
+[!] Trying https://www.google.com/"
+[!] Trying https://www.google.com/'
+[+] Detected 1 forms on https://www.google.com/.

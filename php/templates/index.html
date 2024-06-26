@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQLMap Runner</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <form id="sqlmap-form">
+        <label for="url">URL:</label><br>
+        <input type="text" id="url" name="url"><br>
+        <label for="token">Token:</label><br>
+        <input type="text" id="token" name="token"><br>
+        <label for="level">Level:</label><br>
+        <input type="text" id="level" name="level"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <pre id="output"></pre>
+
+    <script>
+    $("#sqlmap-form").submit(function(event) {
+        event.preventDefault();
+
+        $.post("/run_sqlmap", $(this).serialize(), function(data) {
+            $("#output").text(data);
+        });
+    });
+    </script>
+</body>
+</html>
